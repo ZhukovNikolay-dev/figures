@@ -5,15 +5,15 @@ public class TerminalMenu {
     static void startMenu() {
         System.out.println(startMenuText);
         Scanner input = new Scanner(System.in);
-        switch (input.nextInt()){
-            case 1:
+        switch (input.next()){
+            case "1":
                 break;
-            case 2:
+            case "2":
                 TerminalMenu.acionsMenu();
                 break;
-            case 3:
+            case "3":
                 break;
-            case 4:
+            case "4":
                 break;
             default:
                 System.out.println("Введено некорректное значение");
@@ -27,21 +27,23 @@ public class TerminalMenu {
     static void acionsMenu(){
         System.out.println(actionMenuText);
         Scanner input = new Scanner(System.in);
-        switch (input.nextInt()) {
-            case 1:
+        switch (input.next()) {
+            case "1":
                 break;
-            case 2:
+            case "2":
                 break;
-            case 3:
+            case "3":
                 break;
-            case 4:
+            case "4":
                 break;
-            case 5:
+            case "5":
                 break;
-            case 6:
+            case "6":
                 TerminalMenu.startMenu();
                 break;
             default:
+                System.out.println("Введено некорректное значение");
+                TerminalMenu.acionsMenu();
                 break;
         }
 
