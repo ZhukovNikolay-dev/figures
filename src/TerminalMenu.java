@@ -1,4 +1,8 @@
+
 import java.util.Scanner;
+
+import Factory.*;
+import Figures.*;
 
 public class TerminalMenu {
 
@@ -22,7 +26,6 @@ public class TerminalMenu {
                 TerminalMenu.startMenu();
                 break;
         }
-        //System.out.println(separator);
     }
 
     static void acionsMenu(){
@@ -50,16 +53,21 @@ public class TerminalMenu {
     }
 
     static void addFigureMenu(){
+        IAbstarctFactory factory = null;
         System.out.println(addFigureMenuText);
         Scanner input = new Scanner(System.in);
         switch (input.next()) {
             case "1":
+                factory = new ellipseFactory();
                 break;
             case "2":
+                factory = new triangleFactory();
                 break;
             case "3":
+                factory = new rectangleFactory();
                 break;
             case "4":
+                factory = new rhombusFactory();
                 break;
             case "5":
                 TerminalMenu.startMenu();
@@ -69,6 +77,8 @@ public class TerminalMenu {
                 TerminalMenu.addFigureMenu();
                 break;
         }
+        factory.createFigure();
+        TerminalMenu.addFigureMenu();
     }
 
     private static String separator = "============================================\n";
@@ -87,7 +97,7 @@ public class TerminalMenu {
     private static String addFigureMenuText = "Добавить фигуру:\n" +
             "  1 - Добавить эллипс \u2B2D \n" +
             "  2 - Добавить треугольник \u25B3 \n" +
-            "  3 - Добавить квадрат \u25A1 \n" +
+            "  3 - Добавить прямоугольник \u25A1 \n" +
             "  4 - Добавить ромб \u25CA \n" +
             "  5 - Выход";
 }
