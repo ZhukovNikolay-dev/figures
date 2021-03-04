@@ -31,6 +31,7 @@ public class TerminalMenu {
     static void acionsMenu(){
         System.out.println(actionMenuText);
         Scanner input = new Scanner(System.in);
+        IAbstarctFactory factory;
         switch (input.next()) {
             case "1":
                 break;
@@ -77,6 +78,7 @@ public class TerminalMenu {
                 TerminalMenu.addFigureMenu();
                 break;
         }
+        assert factory != null;
         factory.createFigure();
         TerminalMenu.addFigureMenu();
     }

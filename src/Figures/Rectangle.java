@@ -1,9 +1,9 @@
 package Figures;
 
-import Interfaces.Figure;
-
-public class Rectangle implements Figure {
+public class Rectangle implements IFigure {
     public Rectangle() {
-        System.out.println("Создан Прямоугольник");
+        System.out.println("Введите координату вершины, длинну и ширину");
+
+        //System.out.println("Создан Прямоугольник");
     }
 }

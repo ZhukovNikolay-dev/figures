@@ -1,9 +1,9 @@
 package Figures;
 
-import Interfaces.Figure;
-
-public class Triangle implements Figure {
+public class Triangle implements IFigure {
+        //Конструктор треугольника
     public Triangle(){
         System.out.println("Создан Теугольник");
     }
+
 }

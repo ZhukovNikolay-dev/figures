@@ -1,12 +1,14 @@
 package Factory;
 
-import Figures.Ellipse;
-import Figures.Rectangle;
-import Figures.Rhombus;
-import Figures.Triangle;
-import Interfaces.Figure;
+import Figures.IFigure;
+import Interfaces.IMove;
+import Interfaces.IRotate;
+import Interfaces.IScale;
 
 public interface IAbstarctFactory {
-    Figure createFigure();
+    IFigure createFigure();
+    IMove move();
+    IRotate rotate();
+    IScale scale();
 
 }

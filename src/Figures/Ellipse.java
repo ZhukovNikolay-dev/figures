@@ -1,9 +1,9 @@
 package Figures;
 
-import Interfaces.Figure;
-
-public class Ellipse implements Figure {
+public class Ellipse implements IFigure {
     public Ellipse(){
-        System.out.println("Создан Элипс");
+        System.out.println("Введите кооринаты фокусов и ");
+
+        //System.out.println("Создан Элипс");
     }
 }
